@@ -6,6 +6,22 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Richards Bay Airport",
+    desc: "Modern airport website with public travel information",
+    image: "/projects/airport.jpg",
+    github: null,
+    live: null,
+    stacks: ["HTML", "CSS", "JavaScript", "PHP", "Joomla", "MySQL", "Firebase"],
+  },
+  {
+    title: "uMkhanyakude District Municipality",
+    desc: "Official municipal website for public services and announcements",
+    image: "/projects/umkhanya.png",
+    github: null,
+    live: null,
+    stacks: ["HTML", "CSS", "JavaScript", "PHP", "Joomla", "MySQL", "Firebase"],
+  },
+  {
     title: "Hluza iCulo AI",
     desc: "AI-powered isiZulu voice assistant for education and accessibility.",
     image: "/projects/hluza-iculo-ai.png",
@@ -16,80 +32,77 @@ const projects = [
   {
     title: "Kopano Cleaning Solutions",
     desc: "Professional cleaning services website with booking & contact features.",
-    image: "/projects/kopano-cleaning.png",
+    image: "/projects/kopano.jpg",
     github: null,
     live: "https://kopano-cleaning-solutions.web.app/",
     stacks: ["Next.js", "Tailwind CSS", "Firebase", "SEO"],
   },
-  {
-    title: "InvestConnect",
-    desc: "Startup networking platform connecting founders, mentors & investors.",
-    image: "/projects/investconnect.png",
-    github: null,
-    live: null,
-    stacks: ["Flutter", "Firebase", "Supabase", "REST API"],
-  },
-  {
-    title: "Unity 3D Hunting Game",
-    desc: "Mobile 3D hunting game with AI-driven animals and scoring system.",
-    image: "/projects/unity-hunt.png",
-    github: null,
-    live: null,
-    stacks: ["Unity", "C#", "AI", "3D Graphics"],
-  },
+  
 ];
 
 export default function Home() {
   return (
     <main className="overflow-hidden">
       {/* ================= HERO ================= */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 blur-3xl opacity-30" />
-        </div>
+<section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 overflow-hidden">
 
-        <div className="text-center max-w-3xl">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl sm:text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-text text-transparent"
-          >
-            Mfundo Sithole
-          </motion.h1>
+ {/* 🖼️ Background Image */}
+<Image
+  src="/images/backgound.jpg"   // change to your image path
+  alt="Hero background"
+  fill
+  priority
+  className="absolute inset-0 object-cover -z-20"
+/>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="mt-6 text-base sm:text-lg text-gray-600 dark:text-gray-400"
-          >
-            Mobile & Web Developer building modern applications, AI-driven
-            solutions, and scalable digital products.
-          </motion.p>
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/60 -z-10" />
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Link
-              href="/projects"
-              className="rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 font-medium shadow-lg hover:scale-105 transition"
-            >
-              View Projects
-            </Link>
-            <Link
-              href="/contact"
-              className="rounded-lg border px-8 py-3 hover:scale-105 transition"
-            >
-              Contact Me
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+  {/* Gradient glow */}
+  <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 blur-3xl opacity-30 -z-10" />
 
+  <div className="text-center max-w-3xl text-white">
+    <motion.h1
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9, ease: "easeOut" }}
+      className="text-4xl sm:text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"
+    >
+      Mfundo Sithole
+    </motion.h1>
+
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3 }}
+      className="mt-6 text-base sm:text-lg text-gray-200"
+    >
+      Mobile & Web Developer crafting high-performance applications,
+      AI-powered solutions, and scalable digital products.
+    </motion.p>
+
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.6 }}
+      className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+    >
+      <Link
+        href="/projects"
+        className="rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 font-medium shadow-lg hover:scale-105 transition"
+      >
+        View Projects
+      </Link>
+
+      <Link
+        href="/contact"
+        className="rounded-lg border border-white/30 text-white px-8 py-3 hover:bg-white/10 hover:scale-105 transition"
+      >
+        Contact Me
+      </Link>
+    </motion.div>
+  </div>
+</section>
       {/* ================= PROJECTS ================= */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
         <motion.h2
