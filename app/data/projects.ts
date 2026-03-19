@@ -400,6 +400,46 @@ export const projects = [
     "Modern hospitality UI design",
   ],
 },
+ {
+    slug: "myeza-shisanyama",
+    title: "Myeza Shisanyama",
+    shortDescription:
+      "Good music • Good vibes • Flame-grilled meats for every taste.",
+    description:
+      "Myeza Shisanyama is located in Madlanzini, Richards Bay. We offer freshly grilled beef, chicken, mutton, and boerewors in a vibrant community atmosphere. Customers can also order online using a cart system built with Next.js.",
+    image: "/projects/myeza.png",
+    link: "https://myeza-shisanyama.vercel.app/",
+    tech: ["Next.js", "React", "Tailwind CSS", "Online Cart"],
+    category: "Food & Hospitality"
+  },
+
+  {
+     
+    slug: "emanzini-guest-lounge",
+    title: "EManzini Guest Lounge & Accommodation",
+    shortDescription:
+      "Luxury stay, vibrant lounge, and premium hospitality in Mtubatuba.",
+    description:
+      "EManzini Guest Lounge & Accommodation offers luxurious rooms, exceptional dining, and a relaxing lounge experience in KwaZulu-Natal.",
+    image: "/projects/emanzini.png",
+    link: "https://e-manzini-guest-lounge.vercel.app/",
+    tech: ["Next.js", "React", "UI/UX Design", "Booking System"],
+    category: "Hospitality"
+  },
+
+  {
+  
+    slug: "inqothovu-smelling-good",
+    title: "Inqothovu Smelling Good",
+    shortDescription:
+      "Premium fragrances for cars, homes, and personal use.",
+    description:
+      "Fragrance brand offering car diffusers, house diffusers, roll-ons, and perfumes.",
+    image: "/projects/inqothovu_app.png",
+    link: "https://inqothovu.vercel.app/",
+    tech: ["React Native", "Expo", "TypeScript", "Firebase"],
+    category: "E-Commerce & Mobile App"
+  },
   {
     slug: "valley-coats",
     title: "Valley Coats",
