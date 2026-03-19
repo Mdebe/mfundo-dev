@@ -1,25 +1,15 @@
-// app/projects/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { projects } from "../../data/projects";
 
+type PageProps = {
+  params: Promise<{ slug: string }>;
+};
 
-export const dynamicParams = false;
+export default async function ProjectPage({ params }: PageProps) {
+  const { slug } = await params;
 
-export function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
-}
-
-interface Params {
-  params: { slug: string };
-}
-
-export default function ProjectPage({ params }: Params) {
-  const project = projects.find(
-    (p) => p.slug === params.slug
-  );
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -53,6 +43,7 @@ export default function ProjectPage({ params }: Params) {
         <h3 className="font-semibold mb-3">
           Technologies Used
         </h3>
+
         <div className="flex flex-wrap gap-2">
           {project.tech.map((t) => (
             <span
